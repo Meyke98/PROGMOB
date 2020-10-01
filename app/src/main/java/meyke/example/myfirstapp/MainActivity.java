@@ -3,7 +3,6 @@ package meyke.example.myfirstapp;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         final TextView txtView = (TextView)findViewById(R.id.mainActivityTextView);
         Button myBtn = (Button)findViewById(R.id.button1);
         final EditText myEditText = (EditText)findViewById(R.id.editText1);
+        Button btnHelp = (Button)findViewById(R.id.btnHelp);
         Button btnTracker = (Button)findViewById(R.id.btnTracker);
 
         txtView.setText(R.string.text_hello_world);
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
                 txtView.setText(myEditText.getText().toString());
             }
         });
-        btnTracker.setOnClickListener(new View.OnClickListener() {
+        btnHelp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,TrackerActivity.class);
@@ -38,6 +38,13 @@ public class MainActivity extends AppCompatActivity {
                 b.putString("Tracker_string", myEditText.getText().toString());
                 intent.putExtras(b);
 
+                startActivity(intent);
+            }
+        });
+        btnTracker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,TrackerActivity2.class);
                 startActivity(intent);
             }
         });
