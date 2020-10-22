@@ -8,6 +8,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import meyke.example.myfirstapp.Package.CardViewTestActivity;
+import meyke.example.myfirstapp.Package.ListActivity;
+import meyke.example.myfirstapp.Package.RecyclerActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -20,6 +24,10 @@ public class MainActivity extends AppCompatActivity {
         final EditText myEditText = (EditText)findViewById(R.id.editText1);
         Button btnHelp = (Button)findViewById(R.id.btnHelp);
         Button btnTracker = (Button)findViewById(R.id.btnTracker);
+
+        Button btnList = (Button)findViewById(R.id.btnListView);
+        Button btnRecycler = (Button)findViewById(R.id.btnRecyclerView);
+        Button btnCard = (Button)findViewById(R.id.btnCardView);
 
         txtView.setText(R.string.text_hello_world);
         myBtn.setOnClickListener(new View.OnClickListener() {
@@ -45,6 +53,27 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,TrackerActivity2.class);
+                startActivity(intent);
+            }
+        });
+        btnList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ListActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnRecycler.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, RecyclerActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CardViewTestActivity.class);
                 startActivity(intent);
             }
         });

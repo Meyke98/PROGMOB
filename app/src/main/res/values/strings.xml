@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">My First App</string>
-    <string name="text_hello_world">Hello Vanny</string>
+    <string name="text_hello_world">こんにちわ</string>
 </resources>
