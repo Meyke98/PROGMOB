@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="meyke.example.myfirstapp">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,19 +12,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Package.CardViewTestActivity"></activity>
-        <activity android:name=".Package.RecyclerActivity" />
-        <activity android:name=".Package.ListActivity" />
-        <activity android:name=".test" />
-        <activity android:name=".TrackerActivity2" />
-        <activity android:name=".TrackerActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".CRUD.MahasiswaUpdateActivity"></activity>
+        <activity android:name=".CRUD.HapusMhsActivity" />
+        <activity android:name=".CRUD.MahasiswaGetAllActivity" />
+        <activity android:name=".CRUD.MahasiswaAddActivity" />
+        <activity
+            android:name=".CRUD.MainMhsActivity"
+            android:label="Menu CRUD Mahasiswa">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Package.CardViewTestActivity" />
+        <activity android:name=".Package.RecyclerActivity" />
+        <activity android:name=".Package.ListActivity" />
+        <activity android:name=".Pertemuan4.DebuggingActivity" />
+        <activity android:name=".TrackerActivity2" />
+        <activity android:name=".TrackerActivity" />
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
