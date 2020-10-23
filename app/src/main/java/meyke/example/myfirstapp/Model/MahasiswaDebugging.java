@@ -1,11 +1,11 @@
 package meyke.example.myfirstapp.Model;
 
-public class Mahasiswa {
+public class MahasiswaDebugging {
     private String nama;
     private String nim;
     private String notelp;
 
-    public Mahasiswa(String nama, String nim, String notelp) {
+    public MahasiswaDebugging(String nama, String nim, String notelp) {
         this.nama = nama;
         this.nim = nim;
         this.notelp = notelp;
@@ -27,11 +27,11 @@ public class Mahasiswa {
         this.nim = nim;
     }
 
-    public String getNoTelp() {
+    public String getNotelp() {
         return notelp;
     }
 
-    public void setNoTelp(String notelp) {
+    public void setNotelp(String notelp) {
         this.notelp = notelp;
     }
 }

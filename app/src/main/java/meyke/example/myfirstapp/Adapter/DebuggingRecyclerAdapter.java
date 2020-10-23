@@ -14,11 +14,11 @@ import java.util.List;
 import meyke.example.myfirstapp.Model.Mahasiswa;
 import meyke.example.myfirstapp.R;
 
-public class MhsRecyclerAdapter extends RecyclerView.Adapter<MhsRecyclerAdapter.ViewHolder> {
+public class DebuggingRecyclerAdapter extends RecyclerView.Adapter<DebuggingRecyclerAdapter.ViewHolder> {
     private Context context;
     private List<Mahasiswa> mahasiswaList;
 
-    public MhsRecyclerAdapter(Context context) {
+    public DebuggingRecyclerAdapter(Context context) {
         this.context = context;
         mahasiswaList = new ArrayList<>();
     }
@@ -36,26 +36,26 @@ public class MhsRecyclerAdapter extends RecyclerView.Adapter<MhsRecyclerAdapter.
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View v = LayoutInflater.from(context).inflate(R.layout.item_list_recycler,viewGroup,false);
-        return new ViewHolder(v);
+        View view = LayoutInflater.from(context).inflate(R.layout.item_list_debugging,viewGroup,false);
+        return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
+    public void onBindViewHolder(@NonNull DebuggingRecyclerAdapter.ViewHolder viewHolder, int i) {
         Mahasiswa m = mahasiswaList.get(i);
 
         viewHolder.tvNama.setText(m.getNama());
         viewHolder.tvNim.setText(m.getNim());
         viewHolder.tvNoTelp.setText(m.getNoTelp());
-    }
 
+    }
 
     @Override
     public int getItemCount() {
         return mahasiswaList.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder {
         private TextView tvNama, tvNim, tvNoTelp;
 
         public ViewHolder(@NonNull View itemView) {
@@ -64,5 +64,6 @@ public class MhsRecyclerAdapter extends RecyclerView.Adapter<MhsRecyclerAdapter.
             tvNim = itemView.findViewById(R.id.tvNim);
             tvNoTelp = itemView.findViewById(R.id.tvNoTelp);
         }
+
     }
 }

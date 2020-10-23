@@ -11,6 +11,7 @@ import android.widget.TextView;
 import meyke.example.myfirstapp.Package.CardViewTestActivity;
 import meyke.example.myfirstapp.Package.ListActivity;
 import meyke.example.myfirstapp.Package.RecyclerActivity;
+import meyke.example.myfirstapp.Pertemuan4.DebuggingActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         Button btnList = (Button)findViewById(R.id.btnListView);
         Button btnRecycler = (Button)findViewById(R.id.btnRecyclerView);
         Button btnCard = (Button)findViewById(R.id.btnCardView);
+        Button btnDeb = (Button)findViewById(R.id.btnDebug);
 
         txtView.setText(R.string.text_hello_world);
         myBtn.setOnClickListener(new View.OnClickListener() {
@@ -74,6 +76,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, CardViewTestActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnDeb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, DebuggingActivity.class);
                 startActivity(intent);
             }
         });
