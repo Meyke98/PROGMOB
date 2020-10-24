@@ -17,7 +17,7 @@ public class MainMhsActivity extends AppCompatActivity {
 
         Button btnGetMhs = (Button)findViewById(R.id.btnGetMhs);
         Button btnAddMhs = (Button)findViewById(R.id.btnAddMhs);
-        Button btnDlt = (Button)findViewById(R.id.btnHapus);
+        Button btnHapus = (Button)findViewById(R.id.btnDltMhs);
         Button btnUpdate = (Button)findViewById(R.id.btnUpdate);
 
         btnGetMhs.setOnClickListener(new View.OnClickListener() {
@@ -36,7 +36,7 @@ public class MainMhsActivity extends AppCompatActivity {
             }
         });
 
-        btnDlt.setOnClickListener(new View.OnClickListener() {
+        btnHapus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainMhsActivity.this, HapusMhsActivity.class);

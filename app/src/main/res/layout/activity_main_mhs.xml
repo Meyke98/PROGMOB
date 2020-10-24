@@ -10,21 +10,38 @@
         android:id="@+id/btnGetMhs"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
+        android:layout_marginTop="216dp"
         android:text="Lihat Mahasiswa"
-        app:layout_constraintBottom_toTopOf="@+id/btnAddMhs"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnAddMhs"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="148dp"
         android:text="Tambah Mahasiswa"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGetMhs" />
+
+    <Button
+        android:id="@+id/btnDltMhs"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="HAPUS"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAddMhs" />
+
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="UBAH"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnDltMhs" />
 </android.support.constraint.ConstraintLayout>

@@ -24,9 +24,9 @@ public class MahasiswaUpdateActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mahasiswa_update);
 
-        final EditText UpdtNim = (EditText)findViewById(R.id.UpdtNimAwal);
+        final EditText UpdtNimAwal = (EditText)findViewById(R.id.UpdtNimAwal);
         final EditText UpdtNama = (EditText)findViewById(R.id.UpdtNama);
-        final EditText UpdtNimBaru = (EditText)findViewById(R.id.UpdtNim);
+        final EditText UpdtNim = (EditText)findViewById(R.id.UpdtNim);
         final EditText UpdtAlamat = (EditText)findViewById(R.id.UpdtAlamat);
         final EditText UpdtEmail = (EditText)findViewById(R.id.UpdtEmail);
 

@@ -8,8 +8,8 @@
 
     <EditText
         android:id="@+id/editTxtHapus"
-        android:layout_width="371dp"
-        android:layout_height="35dp"
+        android:layout_width="345dp"
+        android:layout_height="51dp"
         android:layout_marginTop="84dp"
         android:ems="10"
         android:inputType="textPersonName"

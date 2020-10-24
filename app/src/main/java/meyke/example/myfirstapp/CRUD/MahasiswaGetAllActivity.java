@@ -24,6 +24,7 @@ public class MahasiswaGetAllActivity extends AppCompatActivity {
     MhsCRUDRecyclerAdapter mhsAdapter;
     ProgressDialog pd;
     List<Mahasiswa> mahasiswaList;
+    private RetrofitClientInstance GetDataService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
