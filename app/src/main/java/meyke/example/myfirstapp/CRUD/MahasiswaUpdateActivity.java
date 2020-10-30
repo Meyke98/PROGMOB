@@ -36,36 +36,37 @@ public class MahasiswaUpdateActivity extends AppCompatActivity {
         btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pd.setTitle("Just Wait Coy!");
+                pd.setTitle("Loading...");
                 pd.show();
 
 
                 GetDataService service = RetrofitClientInstance.getRetrofitInstance().create(GetDataService.class);
                 Call<DefaultResult> dlt = service.delete_mhs(
-                        UpdtNim.getText().toString(),
+                        UpdtNimAwal.getText().toString(),
                         "72170121"
                 );
 
-                GetDataService services =RetrofitClientInstance.getRetrofitInstance().create(GetDataService.class);
+                GetDataService services = RetrofitClientInstance.getRetrofitInstance().create(GetDataService.class);
                 Call<DefaultResult> call = services.update_mhs(
                         UpdtNama.getText().toString(),
                         UpdtNim.getText().toString(),
                         UpdtAlamat.getText().toString(),
                         UpdtEmail.getText().toString(),
-                        "Anda Boleh Mengosongkan nya!", "72170121"
+                        "Boleh dikosongkan",
+                        "72170121"
                 );
 
                 dlt.enqueue(new Callback<DefaultResult>() {
                     @Override
                     public void onResponse(Call<DefaultResult> call, Response<DefaultResult> response) {
-                        Toast.makeText(MahasiswaUpdateActivity.this, "Berhasil di Update",
+                        Toast.makeText(MahasiswaUpdateActivity.this, "Update berhasil!",
                                 Toast.LENGTH_LONG).show();
                     }
 
                     @Override
                     public void onFailure(Call<DefaultResult> call, Throwable t) {
                         pd.dismiss();
-                        Toast.makeText(MahasiswaUpdateActivity.this, "ERROR COY!",
+                        Toast.makeText(MahasiswaUpdateActivity.this, "Error!",
                                 Toast.LENGTH_LONG).show();
                     }
                 });
@@ -75,20 +76,20 @@ public class MahasiswaUpdateActivity extends AppCompatActivity {
                         UpdtNim.getText().toString(),
                         UpdtAlamat.getText().toString(),
                         UpdtEmail.getText().toString(),
-                        "Anda Boleh Mengosongkan nya!", "72170121"
+                        "Boleh dikosongkan!", "72170121"
                 );
 
                 add.enqueue(new Callback<DefaultResult>() {
                     @Override
                     public void onResponse(Call<DefaultResult> call, Response<DefaultResult> response) {
                         pd.dismiss();
-                        Toast.makeText(MahasiswaUpdateActivity.this, "Berhasil Di Simpan!", Toast.LENGTH_LONG).show();
+                        Toast.makeText(MahasiswaUpdateActivity.this, "Update berhasil!", Toast.LENGTH_LONG).show();
                     }
 
                     @Override
                     public void onFailure(Call<DefaultResult> call, Throwable t) {
                         pd.dismiss();
-                        Toast.makeText(MahasiswaUpdateActivity.this, "ERROR BROT!", Toast.LENGTH_LONG).show();
+                        Toast.makeText(MahasiswaUpdateActivity.this, "Error!", Toast.LENGTH_LONG).show();
                     }
                 });
             }

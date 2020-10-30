@@ -40,7 +40,7 @@ public class MhsCRUDRecyclerAdapter extends RecyclerView.Adapter<MhsCRUDRecycler
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View v = LayoutInflater.from(context).inflate(R.layout.item_list_cardview,viewGroup,false);
+        View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_list_cardview,viewGroup,false);
         return new ViewHolder(v);
     }
 
@@ -50,9 +50,9 @@ public class MhsCRUDRecyclerAdapter extends RecyclerView.Adapter<MhsCRUDRecycler
 
         viewHolder.tvNama.setText(m.getNama());
         viewHolder.tvNim.setText(m.getNim());
-        //viewHolder.tvNoTelp.setText(m.getNoTelp());
         viewHolder.tvAlamat.setText(m.getAlamat());
         viewHolder.tvEmail.setText(m.getEmail());
+        //viewHolder.tvNoTelp.setText(m.getNoTelp());
     }
 
 
@@ -62,15 +62,15 @@ public class MhsCRUDRecyclerAdapter extends RecyclerView.Adapter<MhsCRUDRecycler
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
-        private TextView tvNama, tvNim, tvNoTelp, tvAlamat, tvEmail;
+        private TextView tvNama, tvNim, tvAlamat, tvEmail;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             tvNama = itemView.findViewById(R.id.tvNama);
             tvNim = itemView.findViewById(R.id.tvNim);
-            //tvNoTelp = itemView.findViewById(R.id.tvNoTelp);
             tvAlamat = itemView.findViewById(R.id.tvAlamat);
             tvEmail = itemView.findViewById(R.id.tvEmail);
+            //tvNoTelp = itemView.findViewById(R.id.tvNoTelp);
         }
     }
 

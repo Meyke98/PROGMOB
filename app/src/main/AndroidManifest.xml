@@ -12,7 +12,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CRUD.MahasiswaUpdateActivity"></activity>
+        <activity android:name=".MenuAwalActivity"></activity>
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".MatkulCRUD.HapusMatkulActivity" />
+        <activity android:name=".MatkulCRUD.MatkulGetAllActivity" />
+        <activity android:name=".MatkulCRUD.UpdateMatkulActivity" />
+        <activity android:name=".MatkulCRUD.MatkulAddActivity" />
+        <activity android:name=".MatkulCRUD.MainMatkulActivity" />
+        <activity android:name=".DosenCRUD.DosenAddActivity" />
+        <activity android:name=".DosenCRUD.DosenUpdateActivity" />
+        <activity android:name=".DosenCRUD.DosenGetAllActivity" />
+        <activity android:name=".DosenCRUD.HapusDosenActivity" />
+        <activity android:name=".DosenCRUD.MainDosenActivity" />
+        <activity android:name=".SplashScreenActivity" />
+        <activity android:name=".CRUD.MahasiswaUpdateActivity" />
         <activity android:name=".CRUD.HapusMhsActivity" />
         <activity android:name=".CRUD.MahasiswaGetAllActivity" />
         <activity android:name=".CRUD.MahasiswaAddActivity" />
@@ -32,6 +45,7 @@
         <activity android:name=".TrackerActivity2" />
         <activity android:name=".TrackerActivity" />
         <activity android:name=".MainActivity" />
+        <activity android:name=".Adapter.DosenCRUDRecyclerAdapter" />
     </application>
 
 </manifest>

@@ -3,8 +3,7 @@ package meyke.example.myfirstapp.Model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-
-public class Mahasiswa {
+public class Dosen {
     @SerializedName("id")
     @Expose
     private String id;
@@ -13,11 +12,9 @@ public class Mahasiswa {
     @Expose
     private String nama;
 
-    @SerializedName("nim")
+    @SerializedName("nidn")
     @Expose
-    private String nim;
-
-    private String notelp;
+    private String nidn;
 
     @SerializedName("alamat")
     @Expose
@@ -27,6 +24,10 @@ public class Mahasiswa {
     @Expose
     private String email;
 
+    @SerializedName("gelar")
+    @Expose
+    private String gelar;
+
     @SerializedName("foto")
     @Expose
     private String foto;
@@ -35,29 +36,24 @@ public class Mahasiswa {
     @Expose
     private String nim_progmob;
 
-    public Mahasiswa(String nama, String nim, String notelp) {
-        this.nama = nama;
-        this.nim = nim;
-        this.notelp = notelp;
-    }
 
-    public Mahasiswa(String id, String nama, String nim, String notelp, String alamat, String email, String foto, String nim_progmob) {
-        this.id = id;
+    public Dosen(String nama, String nidn, String alamat,  String email, String gelar, String foto, String nim_progmob){
         this.nama = nama;
-        this.nim = nim;
-        this.notelp = notelp;
+        this.nidn = nidn;
         this.alamat = alamat;
         this.email = email;
+        this.gelar = gelar;
         this.foto = foto;
         this.nim_progmob = nim_progmob;
     }
 
-    public Mahasiswa(String nama, String nim, String notelp, String alamat, String email, String foto, String nim_progmob) {
+    public Dosen(String id, String nama, String nidn, String alamat, String email, String gelar, String foto, String nim_progmob){
+        this.id = id;
         this.nama = nama;
-        this.nim = nim;
-        this.notelp = notelp;
+        this.nidn = nidn;
         this.alamat = alamat;
         this.email = email;
+        this.gelar = gelar;
         this.foto = foto;
         this.nim_progmob = nim_progmob;
     }
@@ -70,7 +66,6 @@ public class Mahasiswa {
         this.id = id;
     }
 
-
     public String getNama() {
         return nama;
     }
@@ -79,21 +74,14 @@ public class Mahasiswa {
         this.nama = nama;
     }
 
-    public String getNim() {
-        return nim;
+    public String getNidn() {
+        return nidn;
     }
 
-    public void setNim(String nim) {
-        this.nim = nim;
+    public void setNidn(String nidn) {
+        this.nidn = nidn;
     }
 
-    public String getNoTelp() {
-        return notelp;
-    }
-
-    public void setNoTelp(String notelp) {
-        this.notelp = notelp;
-    }
     public String getAlamat() {
         return alamat;
     }
@@ -108,6 +96,14 @@ public class Mahasiswa {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getGelar() {
+        return gelar;
+    }
+
+    public void setGelar(String gelar) {
+        this.gelar = gelar;
     }
 
     public String getFoto() {

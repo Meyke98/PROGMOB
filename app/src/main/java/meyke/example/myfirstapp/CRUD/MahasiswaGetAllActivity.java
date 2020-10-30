@@ -33,7 +33,7 @@ public class MahasiswaGetAllActivity extends AppCompatActivity {
 
         rvMhs = (RecyclerView)findViewById(R.id.rvGetMhsAll);
         pd = new ProgressDialog(this);
-        pd.setTitle("Tolong Bersabar");
+        pd.setTitle("Loading...");
         pd.show();
 
         GetDataService service = RetrofitClientInstance.getRetrofitInstance().create(GetDataService.class);
